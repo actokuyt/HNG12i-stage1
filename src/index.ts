@@ -25,10 +25,11 @@ const classifyNumber: RequestHandler<{}, {}, {}, NumberQuery> = async (
   const { number } = req.query;
   const num = Number(number);
 
-  if (isNaN(num)) {
+  if (isNaN(num) || !Number.isInteger(num)) {
     res.status(400).json({
       number: number,
       error: true,
+      message: "Only integers are allowed.",
     });
     return;
   }
