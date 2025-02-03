@@ -23,11 +23,11 @@ This API classifies a given number and returns interesting mathematical properti
   {
       "number": "alphabet",
       "error": true,
-      "message": "Only integers are allowed."
+      "message": "Only positive integers are allowed."
   }
   ```
 
-  **Note:** this API does not accept floats or decimals.
+  **Note:** this API does not accept negative numbers, floats or decimals.
 
 ## Deployment
 
