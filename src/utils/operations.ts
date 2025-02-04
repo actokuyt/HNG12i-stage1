@@ -28,7 +28,7 @@ export function isArmstrong(num: number): boolean {
 }
 
 export function getDigitSum(num: number): number {
-  return String(num)
+  return String(Math.abs(num))
     .split("")
     .reduce((acc, digit) => acc + Number(digit), 0);
 }
